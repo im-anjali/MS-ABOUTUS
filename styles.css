@@ -28,6 +28,10 @@ body {
     overflow: auto;
     text-align: center;
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+      display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 @font-face {
     font-family: 'Azonix';
