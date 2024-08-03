@@ -1,0 +1,112 @@
+#readMoreBtn1, #readLessBtn1, #readMoreBtn2, #readLessBtn2, #readMoreBtn3, #readLessBtn3,.toggleBtn {
+    display: none;
+  }
+
+@media only screen and (max-width:700px) {
+    #readMoreBtn1, #readMoreBtn2, #readMoreBtn3{
+        display: flex;
+    }
+    .moreText {
+        display: none;
+    }
+  #readMoreBtn1, #readLessBtn1, #readMoreBtn2, #readLessBtn2, #readMoreBtn3, #readLessBtn3 {
+    position: relative;
+    color: white;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    outline: none;
+    height: 50px;
+    font-size: 1.2rem;
+    background-color: transparent;
+}
+
+/* Pseudo-elements for buttons */
+#readMoreBtn1:before, #readMoreBtn1:after,
+#readLessBtn1:before, #readLessBtn1:after,
+#readMoreBtn2:before, #readMoreBtn2:after,
+#readLessBtn2:before, #readLessBtn2:after,
+#readMoreBtn3:before, #readMoreBtn3:after,
+#readLessBtn3:before, #readLessBtn3:after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    border: 1px solid;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* Before pseudo-element for buttons */
+#readMoreBtn1:before, #readLessBtn1:before,
+#readMoreBtn2:before, #readLessBtn2:before,
+#readMoreBtn3:before, #readLessBtn3:before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: #00aced;
+    border-left-color: #00aced;
+}
+
+/* After pseudo-element for buttons */
+#readMoreBtn1:after, #readLessBtn1:after,
+#readMoreBtn2:after, #readLessBtn2:after,
+#readMoreBtn3:after, #readLessBtn3:after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #00aced;
+    border-right-color: #00aced;
+}
+
+/* Hover effects for buttons */
+#readMoreBtn1:hover:before, #readMoreBtn1:hover:after,
+#readLessBtn1:hover:before, #readLessBtn1:hover:after,
+#readMoreBtn2:hover:before, #readMoreBtn2:hover:after,
+#readLessBtn2:hover:before, #readLessBtn2:hover:after,
+#readMoreBtn3:hover:before, #readMoreBtn3:hover:after,
+#readLessBtn3:hover:before, #readLessBtn3:hover:after {
+    border-color: #00aced;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 5px #00aced, 0 0 5px #00aced inset;
+}
+
+/* Hover effects for buttons */
+#readMoreBtn1:hover, #readLessBtn1:hover,
+#readMoreBtn2:hover, #readLessBtn2:hover,
+#readMoreBtn3:hover, #readLessBtn3:hover {
+    cursor: pointer;
+    background-color: rgb(97, 98, 100);
+}
+
+
+.toggleContent {
+    display: none; /* Initially hide the additional content */
+}
+
+.toggleBtn.hide {
+    display: none; /* Initially hide the "Read Less" button */
+}
+
+.toggleBtn {
+   
+    background-color: transparent;
+    border: 1px solid white;
+    color:white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px ;
+    outline: none;
+    border: 2px solid white ;
+    height: 50px;
+    font-size: 1rem;
+
+}
+  }
